@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content  %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Add A new Patient</h1>
+   <hr class="my-4">
+  </div>
+
+<div class="container">
+   
+<form method= "POST">
+
+   {% csrf_token %} 
+    {{ form.as_p }}
+    
+    <button  type="submit" class="btn btn-primary"> Create </button>
+    
+</form>
+</div>
+
+{% endblock  %}

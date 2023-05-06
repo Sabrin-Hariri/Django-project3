@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block content  %}
+
+<div class="jumbotron">
+    <h1 class="display-4">list of all Patient</h1>
+     <hr class="my-4">
+    </div>
+  
+  <div class="container">
+  
+<ul>
+    {% for item in patient %}
+    <li> {{item.fname}} - {{item.lname}} </li>
+    <br>
+     {% comment %} <a href ="{% url 'hospital/patient_detail/{{item.id}}'   %}" >show details </a> {% endcomment %}
+     -<a href ="{% url 'hospital:details' item.id  %}" >show  </a>
+     -<a href ="{% url 'hospital:update' item.id  %}" >update </a>
+     -<a href ="{% url 'hospital:delete' item.id  %}" >delete </a>
+
+    {% endfor %}
+</ul>
+</div>
+{% endblock  %}
+{% comment %} 
+ {% endcomment %}

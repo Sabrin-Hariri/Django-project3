@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% block content  %}
+
+
+<div class="jumbotron">
+    <h1 class="display-4">show the details</h1>
+     <hr class="my-4">
+    </div>
+  
+
+<div class="container">
+
+    <table class="table">
+      <thead>
+        <tr> 
+          <th scope="col">first name </th>
+          <th scope="col">last name</th>
+          <th scope="col">age </th>
+          <th scope="col">title</th>
+          <th scope="col">description</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+          <td>{{patient.fname}}</td>
+          <td>{{patient.lname}}</td>
+          <td>{{patient.age}}</td>
+          <td>{{patient.title}}</td>
+          <td>{{patient.description}}</td>
+           </tr>  
+      </tbody>
+    </table>
+
+    <a name="" id="" class="btn btn-primary" href="{% url 'hospital:show' %}" role="button">back to list </a> 
+      
+    </div>
+    
+  {%  endblock %}
+
+
+  {% comment %} {% comment %} 
+<ul>
+    {% comment %} {% for item in Patient %}
+    <li> {{ item }} </li>
+    {% endfor %} {% endcomment %}
+{% comment %} 
+    {{ patient }}
+</ul> {% endcomment %}
+ 

@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block content  %}
+
+
+<div class="jumbotron">
+    <h1 class="display-4"> S
+        
+        
+        
+        
+        am Hospitail  </h1>
+     <hr class="my-4">
+    </div>
+  
+  <div class="container">
+  
+
+{% comment %} <a href=" { % url 'thanks' % }" >show</a> {% endcomment %}
+<div class="card text-left">
+  <img class="card-img-top" src=" " alt="">
+  <div class="card-body">
+    <h4 class="card-title"> our hospitail wesh for you love and peace  </h4>
+    {% comment %} <p class="card-text"> </p> {% endcomment %}
+
+
+
+<a href ="{% url 'hospital:create' %}" >Add a new Patient</a>
+<br>
+<br>
+<a href ="{% url 'hospital:show' %}" >show list Patient </a>
+</div>
+</div>
+</div>
+
+{% endblock %}

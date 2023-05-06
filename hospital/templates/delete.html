@@ -1,0 +1,20 @@
+
+{% extends 'main.html' %}
+{% block content  %}
+<div class="jumbotron">
+    <h1 class="display-3"> Are You Sure !!</h1>
+</div>
+
+<div class = "container">
+
+<h2>{{ patient }} </h2>
+
+<form method= "POST">
+
+   {% csrf_token %} 
+    
+    <button  type="submit" class="btn btn-primary"> Delete </button>
+    
+</form>
+</div>
+{% endblock %}
